@@ -1,0 +1,58 @@
+{
+  "product_table": [
+    {
+      "id": 1,
+      "title": "Pizdes Soat",
+      "price": "15.80$",
+      "image": "Image",
+      "description": "Hullas bu soat vashe pizdes",
+      "category_id": "1"
+    },
+    {
+      "id": 2,
+      "title": "Pizdes Ochki",
+      "price": "5.80$",
+      "image": "Image",
+      "description": "Hullas bu Ochki vashe pizdes",
+      "category_id": "2"
+    },
+    {
+      "id": 3,
+      "title": "Pizdes Mishka",
+      "price": "150.80$",
+      "image": "Image",
+      "description": "Hullas bu Mishka vashe pizdes",
+      "category_id": "3"
+    },
+    {
+      "id": 5,
+      "title": "Pizdes Mishka",
+      "price": "150.80$",
+      "image": "Image",
+      "description": "Hullas bu Mishka vashe pizdes",
+      "category_id": "4"
+    }
+  ],
+  "category_table": [
+    {
+      "id": 1,
+      "title": "Pizdes Texnika",
+      "parent_id": "1"
+    },
+    {
+      "id": 2,
+      "title": "Pizdes Uy jihozlari",
+      "parent_id": "2"
+    },
+    {
+      "id": 3,
+      "title": "Pizdes Kiyimlar",
+      "parent_id": "3"
+    },
+    {
+      "id": 4,
+      "title": "Pizdes Aksesuarlar",
+      "parent_id": "4"
+    }
+  ]
+}
