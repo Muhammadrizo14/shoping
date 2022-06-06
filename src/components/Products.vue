@@ -43,12 +43,6 @@
                 .get('http://localhost:3000/products')
                 .then(response => (this.info = response.data))
         },
-        methods: {
-            ToDetailComponents(){
-                console.log(this.info)
-                this.$emit("ToDetailComponents", this.info)
-            }
-        }
     }
 </script>
 
