@@ -1,5 +1,5 @@
 {
-  "product_table": [
+  "products": [
     {
       "id": 1,
       "title": "Pizdes Soat",
@@ -18,22 +18,31 @@
     },
     {
       "id": 3,
-      "title": "Pizdes Mishka",
-      "price": "150.80$",
+      "title": "Pizdes Bakal",
+      "price": "15.80$",
       "image": "Image",
-      "description": "Hullas bu Mishka vashe pizdes",
+      "description": "Hullas bu Bakal vashe pizdes",
       "category_id": "3"
     },
     {
-      "id": 5,
+      "id": 3,
       "title": "Pizdes Mishka",
       "price": "150.80$",
       "image": "Image",
       "description": "Hullas bu Mishka vashe pizdes",
       "category_id": "4"
+    },
+    {
+      "id": 5,
+      "title": "Pizdes Monitor",
+      "price": "989,280$",
+      "image": "Image",
+      "description": "Hullas bu Monitor vashe pizdes",
+      "category_id": "4"
     }
+
   ],
-  "category_table": [
+  "categorys": [
     {
       "id": 1,
       "title": "Pizdes Texnika",

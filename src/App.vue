@@ -1,13 +1,14 @@
 <template>
   <div>
-    <h1>pizdes Hello</h1>
+    <router-view></router-view>
   </div>
 </template>
 
 
 <script>
   export default {
-      name: "v-app"
+    name: "App",
   }
 
 </script>
+
