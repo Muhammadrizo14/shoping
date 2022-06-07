@@ -89,7 +89,8 @@ import router from "@/router/index";
 const app = createApp(App)
 
 app.use(PrimeVue);
-app.use(router)
+app.use(router);
+app.use(store)
 app.component("Card" , Card)
 app.component('Button', Button)
 app.component('Accordion', Accordion);

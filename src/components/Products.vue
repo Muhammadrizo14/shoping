@@ -1,15 +1,15 @@
 <template>
   <div>
-    <router-link :to="'/product/' + i.id" v-for="i in info" v-bind:key="i.id" >
-      <Card class="card card-2" @click="ToDetailComponents">
+    <router-link :to="'/product/' + i.id" v-for="i in info" v-bind:key="i.id">
+      <Card class="card card-2">
         <template #header>
-          <img alt="user header" src="../assets/product-1-2.jpg">
+          <img alt="user header" src="../assets/logo.png">
         </template>
         <template #title>
           {{i.title}}
         </template>
         <template #content>
-          {{i.price }}
+          {{i.price}}
         </template>
       </Card>
     </router-link>
@@ -21,21 +21,15 @@
 
     export default {
         name: "Products",
-        // props: {
-        //     info: {
-        //         type: Array
-        //     }
-        // },
         data() {
             return {
                 info: [],
-                rating: [
-                    {"rating1": null},
-                    {"rating2": null},
-                    {"rating3": null},
-                    {"rating4": null},
-                ]
-
+                // rating: [
+                //     {"rating1": null},
+                //     {"rating2": null},
+                //     {"rating3": null},
+                //     {"rating4": null},
+                // ]
             }
         },
         mounted() {
