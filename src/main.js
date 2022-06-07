@@ -69,7 +69,6 @@ import Textarea from 'primevue/textarea';
 import Timeline from 'primevue/timeline';
 import Toast from 'primevue/toast';
 import Toolbar from 'primevue/toolbar';
-import store from './store'
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
 import ToggleButton from 'primevue/togglebutton';
@@ -117,7 +116,6 @@ app.component('Dialog', Dialog);
 app.component('Divider', Divider);
 app.component('Dropdown', Dropdown);
 app.component('Fieldset', Fieldset);
-app.use(store)
 app.component('FileUpload', FileUpload);
 app.component('Image', Image);
 app.component('InlineMessage', InlineMessage);
