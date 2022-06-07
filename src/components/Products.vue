@@ -1,44 +1,44 @@
+<!--<Carousel :value="cars" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions">-->
 <template>
-  <div>
-    <router-link :to="'/product/' + i.id" v-for="i in info" :key="i.id">
-          <Card class="card card-2">
-            <template #header>
-              <img alt="user header" src="../assets/img/11168796-1.jpg">
-            </template>
-            <template #title>
-              {{i.title}}
-            </template>
-            <template #content>
-              {{i.price }}
-            </template>
-          </Card>
+  <div class="page_1">
+    <router-link class="link" :to="'/product/' + i.id" v-for="i in info" :key="i.id">
+      <div class="container">
+        <div class="wrapper-content">
+          <div class="content">
+            <div class="img">
+              <img class="watch-img" alt="watch" src="../assets/img/11168796-1.jpg">
+            </div>
+            <div class="text">
+              <h1 class="text-h1">{{i.title}}</h1>
+              <h2 class="text-h2">{{i.title_2}}</h2>
+              <p class="text-p">{{i.price}}</p>
+            </div>
+            <div class="p-rating p-readonly icons">
+              <span class="p-rating-icon pi pi-star-fill"></span>
+              <span class="p-rating-icon pi pi-star-fill"></span>
+              <span class="p-rating-icon pi pi-star-fill"></span>
+              <span class="p-rating-icon pi pi-star"></span>
+              <span class="p-rating-icon pi pi-star"></span>
+            </div>
+          </div>
+          <div class="buy-now">
+            <button class="p-button p-component p-button-text">
+              <span class="pi pi-shopping-cart p-button-icon p-button-icon-left"></span>
+              <span class="p-button-label">Buy Now</span>
+              <span class="p-ink"></span>
+            </button>
+            <button class="p-button p-component p-button-icon-only p-button-text p-button-secondary">
+              <span class="pi pi-heart p-button-icon"></span>
+              <span class="p-button-label">&nbsp;</span>
+              <span class="p-ink"></span>
+            </button>
+          </div>
+        </div>
+      </div>
     </router-link>
   </div>
-  <div class="container">
-     <div class="wrapper-content">
-       <div class="content">
-         <div class="img">
-           <img class="watch-img" alt="watch" src="../assets/img/11168796-1.jpg">
-         </div>
-         <div class="text">
-           <h1 class="text-h1">App Watch</h1>
-           <h2 class="text-h2">Duis Aute Irure</h2>
-           <p class="text-p">$9.66</p>
-         </div>
-         <div class="p-rating p-readonly icons">
-           <span class="p-rating-icon pi pi-star-fill"></span>
-           <span class="p-rating-icon pi pi-star-fill"></span>
-           <span class="p-rating-icon pi pi-star-fill"></span>
-           <span class="p-rating-icon pi pi-star"></span>
-           <span class="p-rating-icon pi pi-star"></span>
-         </div>
-         <div class="Buy-Now">
-
-         </div>
-       </div>
-     </div>
-  </div>
 </template>
+<!--</Carousel>-->
 
 <script>
     import axios from "axios";
@@ -52,7 +52,24 @@
                     {"rating2": null},
                     {"rating3": null},
                     {"rating4": null},
-                ]
+                ],
+              responsiveOptions: [
+                {
+                  breakpoint: '1024px',
+                  numVisible: 3,
+                  numScroll: 3
+                },
+                {
+                  breakpoint: '600px',
+                  numVisible: 2,
+                  numScroll: 2
+                },
+                {
+                  breakpoint: '480px',
+                  numVisible: 1,
+                  numScroll: 1
+                }
+              ]
             }
         },
         mounted() {
@@ -69,23 +86,183 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--surface-ground)!important;
+}
+.link {
+  text-decoration: none;
 }
  .container {
-   background-color: var(--surface-ground)!important;
    width: 100%;
-   height: 800px;
    padding: 30px;
+   display: flex;
  }
+ .page_1 {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
+.p-button.p-button-secondary.p-button-text, .p-buttonset.p-button-secondary > .p-button.p-button-text, .p-splitbutton.p-button-secondary > .p-button.p-button-text {
+  background-color: transparent;
+  color: #64748B;
+  border-color: transparent;
+}
+.p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+  color: #ffffff;
+  background: #64748B;
+  border: 1px solid #64748B;
+}
+.p-button.p-button-icon-only {
+  width: 3rem;
+  padding: 0.75rem 0px;
+  margin-left: 69px;
+}
+.p-button.p-button-text {
+  background-color: transparent;
+  color: #6366F1;
+  border-color: transparent;
+}
+.p-button-icon-only {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.p-component, .p-component * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.p-button.p-button-secondary.p-button-text, .p-buttonset.p-button-secondary > .p-button.p-button-text, .p-splitbutton.p-button-secondary > .p-button.p-button-text {
+  background-color: transparent;
+  color: #64748B;
+  border-color: transparent;
+}
+.p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+  color: #ffffff;
+  background: #64748B;
+  border: 1px solid #64748B;
+}
+.p-button.p-button-text {
+  background-color: transparent;
+  color: #6366F1;
+  border-color: transparent;
+}
+
+.p-button-icon-only .p-button-label {
+  visibility: hidden;
+  width: 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.p-button-label {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.p-button-label {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.p-button-label {
+  font-weight: 700;
+}
+.p-component, .p-component * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.p-ink {
+  display: block;
+  position: absolute;
+  background: hsla(0,0%,100%,.5);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+.p-component, .p-component * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ .buy-now {
+   padding-top: 1rem!important;
+ }
+.p-button .p-button-icon-left {
+  margin-right: 0.5rem;
+}
+.p-button {
+  color: #ffffff;
+  background: #6366F1;
+  border: 1px solid #6366F1;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border-radius: 6px;
+}
+
+.p-component, .p-component * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.p-button-label {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.p-button.p-button-text:enabled:hover {
+  background: rgba(99, 102, 241, 0.04);
+  color: #6366F1;
+  border-color: transparent;
+}
+.p-button:enabled:hover {
+  background: #4F46E5;
+  color: #ffffff;
+  border-color: #4F46E5;
+}
+.p-button.p-button-text {
+  background-color: transparent;
+  color: #6366F1;
+  border-color: transparent;
+}
+.p-button-label {
+  font-weight: 700;
+}
+.p-component, .p-component * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.p-button-label {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.pi {
+  font-family: primeicons;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.p-component, .p-component * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pi {
+  font-size: 1rem;
+}
  .icons{
    display: flex;
    justify-content: center;
  }
  .wrapper-content {
    width: 300px;
-   height: 400px;
+   height: 425px;
    background-color: #fff;
    -webkit-box-shadow: 0 4px 10px rgba(0,0,0,.03),0 0 2px rgba(0,0,0,.06),0 2px 6px rgba(0,0,0,.12)!important;
    padding: 1.5rem!important;
+
  }
  .content {
    border-bottom-width: 1px!important;
@@ -135,32 +312,42 @@
    height: 300px;
    margin: 1rem;
    position: relative;
-   width: 300px;
  }
 
  .card-2:hover {
    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
    transition: 0.4s all;
  }
+.p-button.p-button-text {
+  background-color: transparent;
+  color: #6366F1;
+  border-color: transparent;
+}
 
+.p-button {
+  color: #ffffff;
+  background: #6366F1;
+  border: 1px solid #6366F1;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border-radius: 6px;
+}
+.p-component {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: normal;
+}
  .p-card-header img {
    width: 340px !important;
    height: 350px;
  }
 
- .p-component {
-   cursor: pointer;
-   width: 379px !important;
-   height: 551px !important;
- }
+.p-component {
+  cursor: pointer;
+  height: 47px !important;
+}
 
- .p-card-header {
-   padding: 1rem;
- }
-
- .p-card-body {
-   text-align: center;
- }
 
  .p-card .p-card-title {
    font-size: 1rem !important;
