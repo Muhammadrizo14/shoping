@@ -1,4 +1,5 @@
 <template>
+  <MenuBar/>
   <div>
     <Products />
   </div>
@@ -6,9 +7,10 @@
 
 <script>
   import Products from "@/components/Products";
+  import MenuBar from "@/components/MenuBar";
     export default {
         name: "Home",
-        components: { Products }
+        components: { Products,MenuBar }
     }
 </script>
 
