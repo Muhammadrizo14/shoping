@@ -1,9 +1,7 @@
-<!--<Carousel :value="cars" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions">-->
 <template>
-  <div class="page_1">
+  <div class="page_1  container-mw">
     <router-link class="link" :to="'/product/' + i.id" v-for="i in info" :key="i.id">
-      <div class="container">
-        <div class="wrapper-content">
+        <div class="wrapper-content container-mw">
           <div class="content">
             <div class="img">
               <img class="watch-img" alt="watch" src="../assets/img/11168796-1.jpg">
@@ -34,11 +32,9 @@
             </button>
           </div>
         </div>
-      </div>
     </router-link>
   </div>
 </template>
-<!--</Carousel>-->
 
 <script>
     import axios from "axios";
@@ -52,24 +48,7 @@
                     {"rating2": null},
                     {"rating3": null},
                     {"rating4": null},
-                ],
-              responsiveOptions: [
-                {
-                  breakpoint: '1024px',
-                  numVisible: 3,
-                  numScroll: 3
-                },
-                {
-                  breakpoint: '600px',
-                  numVisible: 2,
-                  numScroll: 2
-                },
-                {
-                  breakpoint: '480px',
-                  numVisible: 1,
-                  numScroll: 1
-                }
-              ]
+                ]
             }
         },
         mounted() {
@@ -86,7 +65,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--surface-ground)!important;
 }
 .link {
   text-decoration: none;
@@ -96,9 +74,14 @@
    padding: 30px;
    display: flex;
  }
+ .container-mw {
+   max-width: 85%;
+   margin: 0 auto;
+ }
  .page_1 {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-column-gap: 43px;
  }
 .p-button.p-button-secondary.p-button-text, .p-buttonset.p-button-secondary > .p-button.p-button-text, .p-splitbutton.p-button-secondary > .p-button.p-button-text {
   background-color: transparent;
@@ -112,13 +95,19 @@
 }
 .p-button.p-button-icon-only {
   width: 3rem;
-  padding: 0.75rem 0px;
-  margin-left: 69px;
+  padding: 1.8rem 0px;
 }
 .p-button.p-button-text {
   background-color: transparent;
   color: #6366F1;
   border-color: transparent;
+}
+.buy-now {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px;
 }
 .p-button-icon-only {
   -webkit-box-pack: center;
@@ -182,9 +171,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
- .buy-now {
-   padding-top: 1rem!important;
- }
 .p-button .p-button-icon-left {
   margin-right: 0.5rem;
 }
@@ -257,11 +243,12 @@
    justify-content: center;
  }
  .wrapper-content {
-   width: 300px;
+   width: 370px;
    height: 425px;
    background-color: #fff;
    -webkit-box-shadow: 0 4px 10px rgba(0,0,0,.03),0 0 2px rgba(0,0,0,.06),0 2px 6px rgba(0,0,0,.12)!important;
    padding: 1.5rem!important;
+   margin: 20px;
 
  }
  .content {

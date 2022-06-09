@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="wrapper">
     <div class="img">
-        <img class="img-watch" src="../assets/img/11168796-1.jpg">
-    </div>
+      <img src="../assets/img/11168796-1.jpg" alt="Image" class="img-watch"/>
+      </div>
     <div class="ul">
       <ul>
         <li class="li-title">{{details.title}}</li>
@@ -10,8 +10,8 @@
         <li class="li-img">{{details.image}}</li>
         <li class="li-descr">{{details.description}}</li>
       </ul>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -20,16 +20,16 @@ export default {
   name: "DetailsComponents-item",
   data() {
     return {
-      details:[],
+      details: [],
       ayub: "",
     }
   },
   mounted() {
-    const a =  this.$route.params['id']
+    const a = this.$route.params['id']
     console.log(a)
     this.ayub = a
 
-    axios.get(`http://localhost:3000/products/${a}`).then(res=>{
+    axios.get(`http://localhost:3000/products/${a}`).then(res => {
       const data = res.data;
       this.details = data
       console.log(this.details);
@@ -39,9 +39,19 @@ export default {
 
       // this.data = post
     })
+  },
+  methods: {
+    // isTokenAvailable: () => {
+    //   return app;
+    // }
+
   }
 }
+
 </script>
+
+
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
@@ -50,6 +60,8 @@ export default {
     width: 400px;
     height: 500px;
   }
+
+
 .li-img {
   width: 40%;
   font-family: 'Lato', sans-serif;
@@ -61,7 +73,8 @@ export default {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
   }
-  .li-descr {
+
+.li-descr {
     width: 484px;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -89,9 +102,12 @@ export default {
     display: flex;
     align-items: center;
   }
-  .container {
+  .wrapper {
     display: flex;
     width: 60%;
     margin: 0 auto;
+  }
+  .img {
+    position: relative;
   }
 </style>
