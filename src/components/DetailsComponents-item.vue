@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="img">
-        <img class="img-watch" :src="require('../assets/productimage/' + details.imageUrl )">
+        <img class="img-watch" src="../assets/productimage/beer.jpg">
 
 <!--      <Image :src="require('../assets/productimage/' + details.imageUrl )" alt="Image" width="250" preview/>-->
 
