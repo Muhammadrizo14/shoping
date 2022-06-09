@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <div class="img">
-        <img class="img-watch" src="../assets/img/11168796-1.jpg">
+        <img class="img-watch" :src="require('../assets/productimage/' + details.imageUrl )">
+
+<!--      <Image :src="require('../assets/productimage/' + details.imageUrl )" alt="Image" width="250" preview/>-->
+
     </div>
     <div class="ul">
       <ul>

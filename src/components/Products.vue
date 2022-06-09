@@ -3,7 +3,8 @@
     <router-link :to="'/product/' + i.id" v-for="i in info" :key="i.id">
           <Card class="card card-2">
             <template #header>
-              <img alt="user header" src="../assets/img/11168796-1.jpg">
+<!--              <img alt="user header" src="../assets/img/11168796-1.jpg" >-->
+              <img alt="user header" :src="require('../assets/productimage/' + i.imageUrl )" >
             </template>
             <template #title>
               {{i.title}}
