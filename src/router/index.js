@@ -6,6 +6,7 @@ import DetailsProducts from "@/components/DetailsComponents";
 
 
 const routes = [
+
     {path: '/', name: 'Home', component: Home},
     {path: '/products', name: 'Products', component: Products},
     {
@@ -16,6 +17,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  linkActiveClass:'active',
   routes
 })
 

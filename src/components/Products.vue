@@ -1,5 +1,5 @@
 <template>
-  <div class="page_1  container-mw">
+  <div class="page_1">
     <router-link class="link" :to="'/product/' + i.id" v-for="i in info" :key="i.id">
         <div class="wrapper-content container-mw">
           <div class="content">
@@ -25,7 +25,7 @@
               <span class="p-button-label">Buy Now</span>
               <span class="p-ink"></span>
             </button>
-            <button class="p-button p-component p-button-icon-only p-button-text p-button-secondary">
+            <button class="p-button p-component p-button-icon-only p-button-text p-button-secondary" >
               <span class="pi pi-heart p-button-icon"></span>
               <span class="p-button-label">&nbsp;</span>
               <span class="p-ink"></span>
@@ -81,7 +81,8 @@
  .page_1 {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
-   grid-column-gap: 43px;
+   width: 86%;
+   margin: 0 auto;
  }
 .p-button.p-button-secondary.p-button-text, .p-buttonset.p-button-secondary > .p-button.p-button-text, .p-splitbutton.p-button-secondary > .p-button.p-button-text {
   background-color: transparent;
