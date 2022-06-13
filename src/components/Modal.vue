@@ -34,9 +34,9 @@
               <p class="p-0 mt-0 mb-3 line-height-3 text-700"> Dolor purus non enim praesent. At quis risus sed vulputate odio ut. </p>
               <div class="font-bold text-900 mb-3">Color</div>
               <div class="flex align-items-center mb-5">
-                <Button @click="color.blue = true, color.red = false, color.darkblue = false" class=" btn_color1 transition-duration-300 border-circle border-2 mr-3 back"/>
-                <Button  @click="color.red = true, color.blue = false, color.darkblue = false" class=" btn_color2 p-button-rounded p-button-help p-button-outlined border-2 mr-3 back" />
-                <Button  @click="color.darkblue = true,  color.red = false, color.blue = false" class=" btn_color3 p-button-rounded p-button-info p-button-outlined back" />
+                <Button @click="color.blue = true, color.red = false, color.darkblue = false" class=" btn_color1 transition-duration-300 border-circle border-circle border-2 mr-3 back"/>
+                <Button  @click="color.red = true, color.blue = false, color.darkblue = false" class=" btn_color2 p-button-rounded p-button-help border-circle p-button-outlined border-2 mr-3 back" />
+                <Button  @click="color.darkblue = true,  color.red = false, color.blue = false" class=" btn_color3 p-button-rounded p-button-info border-circle p-button-outlined back border-2" />
               </div>
               <div class="mb-3 flex align-items-center justify-content-between">
                 <span class="font-bold text-900">Size</span>
@@ -72,110 +72,8 @@ export default {
   data () {
     return {
       color: this.$store.state.color,
-      products: [
-        {
-          id: 1, title: "Apple Watch",
-          title_2: "Apple Series",
-          price: "15.80$",
-          image: "pp Watch - это самое дарогая и лучшая часа в мире",
-          description: "✅ Даволовчи таъсирга эга, ички органлар фаолиятини тартибга солади.\n✅ Теридаги мауммолар билан курашади.\n✅ Организмдан токсинларни камайтиради ва йўқ қилади.\n✅ Гликозидлар токсинларни йўқ қилишга ва метаболизмни тиклашга ёрдам беради.\n✅ Асаб тизимини яхшилайди ва даволайди.\n✅ Қон босимини яхшилайди.",
-          category_id: "1"
-        },
-        {
-          id: 2,
-          title: "Glasses",
-          title_2: "Glasses in guchi",
-          price: "15.80$",
-          image: "Glasses - это самое дарогая и лучшая часа в мире",
-          description: "✅ Даволовчи таъсирга эга, ички органлар фаолиятини тартибга солади.\n✅ Теридаги мауммолар билан курашади.\n✅ Организмдан токсинларни камайтиради ва йўқ қилади.\n✅ Гликозидлар токсинларни йўқ қилишга ва метаболизмни тиклашга ёрдам беради.\n✅ Асаб тизимини яхшилайди ва даволайди.\n✅ Қон босимини яхшилайди.",
-          category_id: "2"
-        },
-        {
-          id: 3,
-          title: "Bakal",
-          title_2: "Apple Series",
-          price: "15.80$",
-          image: "Bakal - это самое дарогая и лучшая часа в мире",
-          description: "✅ Даволовчи таъсирга эга, ички органлар фаолиятини тартибга солади.\n✅ Теридаги мауммолар билан курашади.\n✅ Организмдан токсинларни камайтиради ва йўқ қилади.\n✅ Гликозидлар токсинларни йўқ қилишга ва метаболизмни тиклашга ёрдам беради.\n✅ Асаб тизимини яхшилайди ва даволайди.\n✅ Қон босимини яхшилайди.",
-          category_id: "3"
-        },
-        {
-          id: 4,
-          title: "Bear",
-          title_2: "Apple Series",
-          price: "15.80$",
-          image: "Bear - это самое дарогая и лучшая часа в мире",
-          description: "✅ Даволовчи таъсирга эга, ички органлар фаолиятини тартибга солади.\n✅ Теридаги мауммолар билан курашади.\n✅ Организмдан токсинларни камайтиради ва йўқ қилади.\n✅ Гликозидлар токсинларни йўқ қилишга ва метаболизмни тиклашга ёрдам беради.\n✅ Асаб тизимини яхшилайди ва даволайди.\n✅ Қон босимини яхшилайди.",
-          category_id: "4"
-        },
-        {
-          id: 5,
-          title: "Monitor",
-          title_2: "Apple Series",
-          price: "15.80$",
-          image: "Monitor - это самое дарогая и лучшая часа в мире",
-          description: "✅ Даволовчи таъсирга эга, ички органлар фаолиятини тартибга солади.\n✅ Теридаги мауммолар билан курашади.\n✅ Организмдан токсинларни камайтиради ва йўқ қилади.\n✅ Гликозидлар токсинларни йўқ қилишга ва метаболизмни тиклашга ёрдам беради.\n✅ Асаб тизимини яхшилайди ва даволайди.\n✅ Қон босимини яхшилайди.",
-          category_id: "5"
-        },
-        {
-          id: 6,
-          title: "Monitor",
-          title_2: "Apple Series",
-          price: "15.80$",
-          image: "Monitor - это самое дарогая и лучшая часа в мире",
-          description: "✅ Даволовчи таъсирга эга, ички органлар фаолиятини тартибга солади.\n✅ Теридаги мауммолар билан курашади.\n✅ Организмдан токсинларни камайтиради ва йўқ қилади.\n✅ Гликозидлар токсинларни йўқ қилишга ва метаболизмни тиклашга ёрдам беради.\n✅ Асаб тизимини яхшилайди ва даволайди.\n✅ Қон босимини яхшилайди.",
-          category_id: "5"
-        },
-        {
-          id: 7,
-          title: "Monitor",
-          title_2: "Apple Series",
-          price: "15.80$",
-          image: "Monitor - это самое дарогая и лучшая часа в мире",
-          description: "✅ Даволовчи таъсирга эга, ички органлар фаолиятини тартибга солади.\n✅ Теридаги мауммолар билан курашади.\n✅ Организмдан токсинларни камайтиради ва йўқ қилади.\n✅ Гликозидлар токсинларни йўқ қилишга ва метаболизмни тиклашга ёрдам беради.\n✅ Асаб тизимини яхшилайди ва даволайди.\n✅ Қон босимини яхшилайди.",
-          category_id: "5"
-        },
-        {
-          id: 8,
-          title: "Monitor",
-          title_2: "Apple Series",
-          price: "15.80$",
-          image: "Monitor - это самое дарогая и лучшая часа в мире",
-          description: "✅ Даволовчи таъсирга эга, ички органлар фаолиятини тартибга солади.\n✅ Теридаги мауммолар билан курашади.\n✅ Организмдан токсинларни камайтиради ва йўқ қилади.\n✅ Гликозидлар токсинларни йўқ қилишга ва метаболизмни тиклашга ёрдам беради.\n✅ Асаб тизимини яхшилайди ва даволайди.\n✅ Қон босимини яхшилайди.",
-          category_id: "5"
-        }
-
-      ],
     }
   },
-  // mounted () {
-  //   document.body.addEventListener('keyup', e => {
-  //     // let p_button = document.querySelector('.btn5')
-  //     let btn1 = document.querySelector('.btn1')
-  //     let btn2 = document.querySelector('.btn2')
-  //     let btn3 = document.querySelector('.btn3')
-  //     let image = document.querySelector('.imgages')
-  //     if(e.keyCode === 27)this.$emit('close')
-  //     btn1.addEventListener('click', () => {
-  //       btn1.classList.toggle('blue1')
-  //       this.color.blue = true
-  //       btn3.classList.remove('blue')
-  //       btn2.classList.remove('pink')
-  //       image.classList.toggle('changeImage')
-  //     }),
-  //
-  //     btn2.addEventListener('click', () => {
-  //       btn2.classList.toggle('pink')
-  //       btn1.classList.remove('blue1')
-  //       btn3.classList.remove('blue')
-  //     })
-  //     btn3.addEventListener('click', () => {
-  //       btn3.classList.toggle('blue')
-  //       btn2.classList.remove('pink')
-  //       btn1.classList.remove('blue1')
-  //     })
-  //   })
-  // },
   methods: {
   }
 }
@@ -202,6 +100,9 @@ export default {
 .fontsize1 {
   font-size: 1rem!important;
 }
+.w-2rem {
+  width: 2rem!important;
+}
 .changeImage {
   background-image: url("../assets/img/app.watch.jpg")!important;
   width: 20rem!important;
@@ -210,7 +111,9 @@ export default {
   background-repeat: no-repeat!important;
   height: 25rem!important;
 }
-
+.border-circle {
+  border-radius: 50%!important;
+}
 .blue {
   background-color: var(--indigo-500)!important;
 }
@@ -474,6 +377,10 @@ export default {
 .w-full {
   width: 100%!important;
 }
+.border-2 {
+  border-width: 2px!important;
+  border-style: solid!important;
+}
 .grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -514,6 +421,7 @@ component * {
 .p-button.p-button-text.p-button-plain {
   color: #6c757d;
 }
+
 .relative {
   position: relative!important;
 }
