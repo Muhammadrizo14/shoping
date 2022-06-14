@@ -7,12 +7,12 @@
           <img src="../assets/img/remen_dlya_chasov_apple_44mm_pomegranate_sport_band_s_m_m_l_645-1000x768.jpg" alt="Image" class="img-watch"/>
         </div>
         <div v-if="color.blue == true">
-          <img src="../assets/img/R27114902_1.jpg" alt="Image" class="img-watch"/>
+          <img src="../assets/img/2cda318e3eb26555a1eabb1fb0ea0a12--ice-watch-digital-watch.jpg" alt="Image" class="img-watch"/>
         </div>
         <div v-if="color.darkblue == true">
           <img src="../assets/img/blue.jpg" alt="Image" class="img-watch"/>
         </div>
-        <button class="btn-hover" v-show="btnHover" @click="modalFirst = !modalFirst">View Details</button>
+        <button class="btn-hover"  @click="modalFirst = !modalFirst">View Details</button>
       </div>
       <div class="img-text">
         <h1 class="text">Hover Image</h1>
@@ -112,15 +112,20 @@ export default {
   margin: 0 auto;
   padding: 15px 55px 15px 55px;
   border: none;
-  background-color: rgba(0,0,0,.5);
   border-radius: 5px;
   color: #fff;
   transition: 0.7s all;
   font-size: 16px;
   position: relative;
-  bottom: 50px;
+  bottom: 34px;
   left: 43px;
+  background: #fff;
 }
+.btn-hover:hover {
+background-color: rgba(0,0,0,.5);
+  cursor: pointer;
+}
+
 
 .li-img {
   width: 40%;
@@ -188,7 +193,7 @@ export default {
   }
   .wrapper {
     display: flex;
-    width: 12%;
+    width: 15%;
     margin: 0 auto;
     align-items: center;
     height: 100vh;

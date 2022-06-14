@@ -9,13 +9,14 @@
                 <img src="../assets/img/remen_dlya_chasov_apple_44mm_pomegranate_sport_band_s_m_m_l_645-1000x768.jpg" class="position-btn">
               </div>
               <div v-if="color.blue == true">
-                <img src="../assets/img/R27114902_1.jpg" class="w-8rem sm:w-15rem lg:w-20rem">
+                <img src="../assets/img/assas.jpg" class="wp sm:w-15rem lg:w-20rem">
               </div>
               <div v-if="color.darkblue == true">
                 <img src="../assets/img/blue.jpg" class="position-btn2">
               </div>
 
             </div>
+
             <div class="col-12 lg:col-6 py-0 lg:pl-5">
               <div class="flex justify-content-end">
                 <button class="p-button p-component p-button-icon-only absolute lg:static p-button-text p-button-plain p-button-rounded" type="button" style="right: 0rem; top: 0rem;" @click="$emit('close')">
@@ -23,13 +24,33 @@
                   <!----><span class="p-ink"></span></button></div><div class="flex align-items-center justify-content-between mb-3">
               <span class="text-xl font-medium text-900">Product Title</span></div><div class="flex align-items-center justify-content-between mb-3">
               <div class="text-xl text-900 lt">$123</div>
-              <div class="flex align-items-center"><span class="mr-3 flex">
-                <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
-                <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
-                <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
-                <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
-                <i class="pi pi-star-fill text-yellow-500"></i></span>
-              </div>
+              <form class="rating-widget">
+                <input type="checkbox" class="star-input" id="1"/>
+                <label class="star-input-label" for="1">1
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star orange"></i>
+                </label>
+                <input type="checkbox" class="star-input" id="2"/>
+                <label class="star-input-label" for="2">2
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star orange"></i>
+                </label>
+                <input type="checkbox" class="star-input" id="3"/>
+                <label class="star-input-label" for="3">3
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star orange"></i>
+                </label>
+                <input type="checkbox" class="star-input" id="4"/>
+                <label class="star-input-label" for="4">4
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star orange"></i>
+                </label>
+                <input type="checkbox" class="star-input" id="5"/>
+                <label class="star-input-label" for="5">5
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star orange"></i>
+                </label>
+              </form>
             </div>
               <p class="p-0 mt-0 mb-3 line-height-3 text-700"> Dolor purus non enim praesent. At quis risus sed vulputate odio ut. </p>
               <div class="font-bold text-900 mb-3">Color</div>
@@ -43,10 +64,10 @@
                 <a tabindex="0" class="cursor-pointer text-600 text-sm flex align-items-center">Size Guide <i class="ml-1 pi pi-angle-right"></i></a>
               </div>
               <div class="flex align-items-center mb-3 text-base">
-                <Button label="S" class="fontsize1 btn5 h-2rem w-2rem border-1 border-300  inline-flex justify-content-center align-items-center flex-shrink-0 border-round mr-2 cursor-pointer hover:surface-100 transition-duration-150 transition-colors border-blue-500 border-2 border-300 background" style="color: black" />
-                <Button label="M" class="fontsize1 btn5 h-2rem w-2rem border-1 border-300  inline-flex justify-content-center align-items-center flex-shrink-0 border-round mr-2 cursor-pointer hover:surface-100 transition-duration-150 transition-colors border-blue-500 border-2 border-300 background" style="color: black" />
-                <Button label="L" class="fontsize1 btn5 h-2rem w-2rem border-1 border-300  inline-flex justify-content-center align-items-center flex-shrink-0 border-round mr-2 cursor-pointer hover:surface-100 transition-duration-150 transition-colors border-blue-500 border-2 border-300 background" style="color: black" />
-                <Button label="XL" class="fontsize1 btn5 h-2rem w-2rem border-1 border-300  inline-flex justify-content-center align-items-center flex-shrink-0 border-round mr-2 cursor-pointer hover:surface-100 transition-duration-150 transition-colors border-blue-500 border-2 border-300 background" style="color: black" />
+                <Button label="S" class="fontsize1 xsm btn5 h-2rem w-2rem border-1 border-300  inline-flex justify-content-center align-items-center flex-shrink-0 border-round mr-2 cursor-pointer hover:surface-100 transition-duration-150 transition-colors border-blue-500 border-2 border-300 background" style="color: black" />
+                <Button label="M" class="fontsize1 xsm-1 btn5 h-2rem w-2rem border-1 border-300  inline-flex justify-content-center align-items-center flex-shrink-0 border-round mr-2 cursor-pointer hover:surface-100 transition-duration-150 transition-colors border-blue-500 border-2 border-300 background" style="color: black" />
+                <Button label="L" class="fontsize1 xsm-2 btn5 h-2rem w-2rem border-1 border-300  inline-flex justify-content-center align-items-center flex-shrink-0 border-round mr-2 cursor-pointer hover:surface-100 transition-duration-150 transition-colors border-blue-500 border-2 border-300 background" style="color: black" />
+                <Button label="XL" class="fontsize1 xsm-3 btn5 h-2rem w-2rem border-1 border-300  inline-flex justify-content-center align-items-center flex-shrink-0 border-round mr-2 cursor-pointer hover:surface-100 transition-duration-150 transition-colors border-blue-500 border-2 border-300 background" style="color: black" />
               </div>
               <button class="p-button p-component w-full" type="button">
                 <!----><span class="pi pi-shopping-cart p-button-icon p-button-icon-left"></span>
@@ -61,6 +82,7 @@
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
   name: "Modal",
   props: {
@@ -73,6 +95,52 @@ export default {
     return {
       color: this.$store.state.color,
     }
+  },
+  mounted() {
+    let xsm = document.querySelector('.xsm')
+    let xsm_1 = document.querySelector('.xsm-1')
+    let xsm_2 = document.querySelector('.xsm-2')
+    let xsm_3 = document.querySelector('.xsm-3')
+    let w_8rem = document.querySelector('.wp')
+    $('.star-input').click(function () {
+      $(this).parent()[0].reset();
+      var prevStars = $(this).prevAll();
+      var nextStars = $(this).nextAll();
+      prevStars.attr('checked', true);
+      nextStars.attr('checked', false);
+      $(this).attr('checked', true);
+    });
+    $('.star-input-label').on('mouseover', function () {
+      var prevStars = $(this).prevAll();
+      prevStars.addClass('hovered');
+    });
+    $('.star-input-label').on('mouseout', function () {
+      var prevStars = $(this).prevAll();
+      prevStars.removeClass('hovered');
+    });
+
+
+    w_8rem.classList.toggle('sc')
+    xsm.addEventListener('mousedown', () => {
+      w_8rem.classList.remove('sc')
+      w_8rem.classList.toggle('w-10rem')
+      w_8rem.classList.remove('w-11rem')
+    })
+    xsm_1.addEventListener('mousedown', () => {
+      w_8rem.classList.remove('w-10rem')
+      w_8rem.classList.toggle('w-11rem')
+    })
+    xsm_2.addEventListener('mousedown', () => {
+      w_8rem.classList.toggle('w-12rem')
+      w_8rem.classList.remove('w-11rem')
+      w_8rem.classList.remove('w-10rem')
+    })
+    xsm_3.addEventListener('mousedown', () => {
+      w_8rem.classList.remove('w-12rem')
+      w_8rem.classList.remove('w-11rem')
+      w_8rem.classList.remove('w-10rem')
+      w_8rem.classList.toggle('w-13rem')
+    })
   },
   methods: {
   }
@@ -103,6 +171,80 @@ export default {
 .w-2rem {
   width: 2rem!important;
 }
+.w-12rem {
+  width: 20rem;
+  position: relative;
+  right: 35px;
+  top: 4px;
+}
+.rating-widget {
+  max-width: 500px;
+  text-align: center;
+  margin: 0px auto;
+  transition:.25s ease-in-out;
+}
+.rating-widget .star-input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -5000px;
+}
+.rating-widget .star-input:checked + .star-input-label .orange {
+  animation: enlarge 0.5s ease-in-out forwards;
+}
+.rating-widget .star-input:checked + .star-input-label:nth-of-type(2) .orange {
+  animation-delay: 0.1s;
+}
+.rating-widget .star-input:checked + .star-input-label:nth-of-type(3) .orange {
+  animation-delay: 0.2s;
+}
+.rating-widget .star-input:checked + .star-input-label:nth-of-type(4) .orange {
+  animation-delay: 0.3s;
+}
+.rating-widget .star-input:checked + .star-input-label:nth-of-type(5) .orange {
+  animation-delay: 0.4s;
+}
+.rating-widget .star-input-label {
+  display: inline-block;
+  padding: 8px 3px;
+  text-indent: -5000px;
+  line-height: 0;
+  color: #dcdcdc;
+  position: relative;
+  cursor: pointer;
+}
+.rating-widget .star-input-label:hover, .rating-widget .star-input-label.hovered {
+  color: #a7a7a7;
+}
+.rating-widget .star-input-label i {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  text-indent: 0;
+}
+.rating-widget .star-input-label i.orange {
+  position: absolute;
+  display: block;
+  padding: 8px 2px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #3B82F6;
+  transform: scale(0);
+}
+@keyframes enlarge {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .changeImage {
   background-image: url("../assets/img/app.watch.jpg")!important;
   width: 20rem!important;
@@ -113,6 +255,18 @@ export default {
 }
 .border-circle {
   border-radius: 50%!important;
+}
+.sc {
+  width: 17rem;
+  position: relative;
+  right: 13px;
+  top: 10px;
+}
+.w-13rem {
+  width: 22rem;
+  position: relative;
+  right: 51px;
+  bottom: 22px;
 }
 .blue {
   background-color: var(--indigo-500)!important;
@@ -426,7 +580,7 @@ component * {
   position: relative!important;
 }
 .w-8rem {
-  width: 16rem !important;
+  width: 16rem;
 }
 .grid {
   display: -webkit-box;
@@ -537,6 +691,7 @@ component * {
   z-index: 999;
   overflow: hidden;
   min-width: 700px;
+  height: 51%;
 }
 
 span {
@@ -1119,7 +1274,22 @@ span {
   background-color: var(--surface-100)!important;
 }
 .w-8rem[data-v-701ac82d][data-v-701ac82d] {
-  width: 17rem !important;
+  width: 14rem;
+  position: relative;
+  top: 44px
+}
+
+.w-10rem {
+  width: 16rem;
+  position: relative;
+  top: 31px;
+  right: 12px;
+}
+.w-11rem {
+  width: 18rem;
+  position: relative;
+  top: 22px;
+  right: 21px;
 }
 
 .position-btn {

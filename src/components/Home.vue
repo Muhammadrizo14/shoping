@@ -8,6 +8,7 @@
 <script>
   import Products from "@/components/Products";
   import MenuBar from "@/components/MenuBar";
+  // import Input from "@/components/Input-localhost"
     export default {
         name: "Home",
         components: { Products,MenuBar }

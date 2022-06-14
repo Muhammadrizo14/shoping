@@ -1,7 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import PrimeVue from 'primevue/config';
+import Vuelidate from 'vuelidate'
 import Accordion from 'primevue/accordion';
+import store from './store'
 import AccordionTab from 'primevue/accordiontab';
 import Avatar from 'primevue/avatar';
 import AvatarGroup from 'primevue/avatargroup';
@@ -88,6 +90,7 @@ import router from "@/router/index";
 const app = createApp(App)
 
 app.use(PrimeVue);
+app.use(Vuelidate)
 app.use(router)
 app.component("Card" , Card)
 app.component('Button', Button)
@@ -167,5 +170,6 @@ app.component('Tree', Tree);
 app.component('TreeSelect', TreeSelect);
 app.component('TreeTable', TreeTable);
 app.component('TriStateCheckbox', TriStateCheckbox);
+app.use(store)
 
 app.mount('#app')
